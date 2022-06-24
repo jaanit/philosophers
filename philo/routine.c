@@ -6,7 +6,7 @@
 /*   By: rjaanit <rjaanit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 01:39:56 by rjaanit           #+#    #+#             */
-/*   Updated: 2022/06/22 04:06:32 by rjaanit          ###   ########.fr       */
+/*   Updated: 2022/06/23 01:08:14 by rjaanit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	check_is_dead(void *check)
 	{
 		if (get_time() - philo[i].last_time_eat > philo->s_data->time_to_die)
 		{		
-			printf("%llu philo %d is dead\n", get_time() - \
+			printf("%llu philo %d died\n", get_time() - \
 			philo->s_data->time_start, philo->id + 1);
 			return (0);
 		}

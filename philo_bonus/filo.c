@@ -6,7 +6,7 @@
 /*   By: rjaanit <rjaanit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 03:40:41 by rjaanit           #+#    #+#             */
-/*   Updated: 2022/06/22 04:33:54 by rjaanit          ###   ########.fr       */
+/*   Updated: 2022/06/23 01:08:31 by rjaanit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*check_is_dead(void *check)
 		if (i > philo->s_data->time_to_die)
 		{
 			sem_wait(philo->s_data->sem_check);
-			printf("%llu philo %d is dead\n", (get_time() - \
+			printf("%llu philo %d died\n", (get_time() - \
 			philo->s_data->time_start), philo->id + 1);
 			break ;
 		}

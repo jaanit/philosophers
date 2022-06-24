@@ -6,7 +6,7 @@
 /*   By: rjaanit <rjaanit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 00:58:55 by rjaanit           #+#    #+#             */
-/*   Updated: 2022/06/22 04:28:47 by rjaanit          ###   ########.fr       */
+/*   Updated: 2022/06/23 01:02:58 by rjaanit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,5 @@ int	lancer_thread(t_philos *philos)
 	}
 	while (check_is_dead(philos))
 		;
-	while(1);
 	return (0);
 }

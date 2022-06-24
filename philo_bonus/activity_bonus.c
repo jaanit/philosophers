@@ -6,7 +6,7 @@
 /*   By: rjaanit <rjaanit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 01:24:36 by rjaanit           #+#    #+#             */
-/*   Updated: 2022/06/20 04:46:07 by rjaanit          ###   ########.fr       */
+/*   Updated: 2022/06/23 01:06:44 by rjaanit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void	take_forks(t_philos *philo)
 {
 	sem_wait(philo->s_data->sem_forks);
-	printf("%llu philo %d take fork\n", (get_time() - \
+	printf("%llu philo %d  has taken a fork\n", (get_time() - \
 	philo->s_data->time_start), philo->id + 1);
 	sem_wait(philo->s_data->sem_forks);
-	printf("%llu philo %d take fork\n", (get_time() - \
+	printf("%llu philo %d  has taken a fork\n", (get_time() - \
 	philo->s_data->time_start), philo->id + 1);
 	start_eating(philo);
 }
@@ -26,7 +26,7 @@ void	take_forks(t_philos *philo)
 void	start_eating(t_philos *philo)
 {
 	philo->last_time_eat = get_time();
-	printf("%llu philo %d strat eating\n", (get_time() - \
+	printf("%llu philo %d is eating\n", (get_time() - \
 	philo->s_data->time_start), philo->id + 1);
 	sleping_time(philo->s_data->time_to_eat);
 	philo->nbr_to_eat++;
